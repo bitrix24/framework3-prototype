@@ -1,0 +1,8 @@
+news list page
+<br>
+{% for article in news %}
+    <li>
+{#        <a href="{{ url('NEWS_ARTICLE', article) }}">{{ article.title }}</a>#}
+        <a href="{{ url('NEWS_ARTICLE', {id: article.id}) }}">{{ article.title }}</a>
+    </li>
+{% endfor %}

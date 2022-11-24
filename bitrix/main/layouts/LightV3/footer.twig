@@ -1,0 +1,24 @@
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <section class="footer-container">
+
+        {{ bottomMenu }}
+
+        {{ socnetLinks }}
+
+        {% if get_slot('extraNavigation') is not empty %}
+            {{ slot('extraNavigation') }}
+        {% else %}
+            <span style="color:#a8d95b;">default footer navigation</span>
+        {% endif %}
+
+        <div class="text-center text-muted pb-3">Call to us</div>
+    </section>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+{% layout %}
+
+{% block workarea %}
+
+    {{ component(
+        ['Bitrix\\Main\\Components\\DemoForumSection\\Controller', 'main'],
+        {
+
+        },
+        'clientForumComponent')
+    }}
+
+{% endblock %}

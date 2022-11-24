@@ -1,0 +1,17 @@
+<div class="store-breadcrumb">
+
+    {% for crumb in crumbs %}
+        {% if not loop.last and crumb.LINK is not empty %}
+            <div class="store-breadcrumb-item" id="bx_breadcrumb_{{ loop.index0 }}">
+                <a class="store-breadcrumb-item-link" href="{{ crumb.LINK }}" title="{{ crumb.TITLE }}" >
+                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.209 15.7666L4.44046 9.99811L3.40415 8.99999L4.44046 8.00127L10.209 2.23275L8.79716 0.820923L0.618452 8.99963L8.79716 17.1783L10.209 15.7666Z" fill="#525C69"/>
+                </svg>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+{{ jsonLd|raw }}

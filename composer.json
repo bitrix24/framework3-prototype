@@ -1,0 +1,31 @@
+{
+    "config": {
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Bitrix\\Main\\Lib\\": "bitrix/main/lib",
+            "Bitrix\\Main\\Components\\": "bitrix/main/components",
+            "Bitrix\\Main\\Solutions\\": "bitrix/main/solutions",
+            "Bitrix\\Main\\Sites\\": "bitrix/main/sites",
+            "Bitrix\\Main\\Layouts\\": "bitrix/main/layouts",
+            "Sites\\": "sites"
+        }
+    },
+    "require": {
+        "guzzlehttp/psr7": "^1.7",
+        "psr/http-server-middleware": "^1.0",
+        "php-di/php-di": "^6.3",
+        "symfony/dependency-injection": "^5.1",
+        "twig/twig": "^3.2",
+        "sabberworm/php-css-parser": "^8.3",
+        "twbs/bootstrap": "4.0.0",
+        "psr/cache": "1.0.0",
+        "ext-memcache": "*",
+        "psr/log": "^3.0",
+        "monolog/monolog": "^2.8",
+        "filp/whoops": "^2.14"
+    }
+}

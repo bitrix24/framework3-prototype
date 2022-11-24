@@ -1,0 +1,28 @@
+<div class="menu-main-container" id="mainMenu">
+    <div class="menu-main-items-container">
+        <div class="menu-main-items-scroll-block">
+            {{ catalog.section.list }}
+            <ul class="menu-main-items">
+
+                {% for item in items %}
+                    {% if (parameters.MAX_LEVEL == 1 and item.DEPTH_LEVEL > 1) %}
+                    {% else %}
+                        <li class="menu-main-item{{ item.SELECTED ? ' selected' : '' }}">
+                            <a href="{{ item.LINK }}" class="menu-main-item-link">
+                                <span class="menu-main-item-text">{{ item.TEXT }}</span>
+                                <span class="menu-main-item-angle"></span>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% if get_slot('extraNavigation') is empty %}
+    {% push extraNavigation %}
+        <span style="color: #00b0ba">extra navigation</span>
+    {% endpush %}
+{% endif %}

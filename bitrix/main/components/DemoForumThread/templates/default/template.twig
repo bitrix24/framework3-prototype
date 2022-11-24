@@ -1,0 +1,18 @@
+thread page
+
+<br><br>
+
+messages:
+
+<br><br>
+
+<li>
+{#    <a href="{{ this.router.linkTo('message', {'message:id': 1, 'message:messageId': 2, 'forum:section:id':1}) }}">message 1</a>#}
+{#    by <a href="{{ this.router.linkTo('forum:users:user:profile', {'forum:users:user:profile:id':5}) }}">username1</a>#}
+
+{#    by <a href="{{ this.router.linkTo('users:user:profile', {'users:user:profile:id':5}) }}">username1</a>#}
+{#    from <a href="{{ this.router.linkTo('forum:section:thread:view', {'forum:section:id':7, 'forum:section:thread:view:id': 8}) }}">thread</a>#}
+
+    by <a href="{{ this.router.linkTo('users_profile', {'id':5}) }}">username1</a> ({{ this.router.linkTo('users_profile', {'id':5}) }})
+    from <a href="{{ this.router.linkTo('forum_thread', {'sectionId':7, 'threadId': 8}) }}">thread</a>
+</li>
